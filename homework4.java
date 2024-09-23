@@ -12,7 +12,7 @@ public class homework4 {
             playAgain = playGameExt(scanner);
         } while (playAgain);
 
-        System.out.println("Thank you for playing!");
+        System.out.println("Thank you for playing! ");
         scanner.close();
     }
 

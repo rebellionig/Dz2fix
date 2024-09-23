@@ -5,7 +5,7 @@ public class homework5
     public static void main(String[] args)
     {
         // Example usage:
-        printString("Hello, World!", 5);
+        printString("Hello, World! ", 5);
 
         int[] array = {1, 6, 3, 8, 5, 10, 2};
         sumAndPrint(array);

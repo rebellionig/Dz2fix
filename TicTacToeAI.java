@@ -24,7 +24,7 @@ public class TicTacToeAI {
     }
 
     private void displayBoard() {
-        System.out.println("Current Board:");
+        System.out.println("Current Board: ");
         for (int i = 0; i < 3; i++) {
             System.out.print(" ");
             for (int j = 0; j < 3; j++) {

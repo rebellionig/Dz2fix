@@ -10,7 +10,7 @@ public class homework3
         int res = checkSign();
         if (res>=0)
         {
-            System.out.println("the sum is positive");
+            System.out.println("the sum is positive or equal to 0");
         } else
         {
             System.out.println("The sum is negative");
