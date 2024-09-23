@@ -7,6 +7,7 @@ public class homework3
     public static void main(String[]args)
     {
         greetings();
+
         int res = checkSign();
         if (res>=0)
         {
@@ -15,8 +16,11 @@ public class homework3
         {
             System.out.println("The sum is negative");
         }
+
         selectColor();
+
         CompareNumbers();
+        
         int initValue=10;
         int delta=5;
         boolean increment=true;
