@@ -6,25 +6,34 @@ public class homework3
 {
     public static void main(String[]args)
     {
-        greetings();
 
-        int res = checkSign();
-        if (res>=0)
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("enter number 1-5: ");
+        int choice=scanner.nextInt();
+        switch (choice)
         {
-            System.out.println("the sum is positive or equal to 0");
-        } else
-        {
-            System.out.println("The sum is negative");
+            case 1:
+                greetings();
+                break;
+            case 2:
+                checkSign();
+                break;
+            case 3:
+                selectColor();
+                break;
+            case 4:
+                CompareNumbers();
+                break;
+            case 5:
+                addOrSubtractandPrint();
+                break;
+            default:
+                System.out.println("error");
         }
+        scanner.close();
 
-        selectColor();
 
-        CompareNumbers();
-        
-        int initValue=10;
-        int delta=5;
-        boolean increment=true;
-        addOrSubtractandPrint(initValue,delta,increment);
+
     }
 
     public static void greetings(){
@@ -33,7 +42,8 @@ public class homework3
         System.out.println("from");
         System.out.println("Java");
     }
-    public static int checkSign()
+
+    public static void checkSign()
     {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter a: ");
@@ -42,9 +52,23 @@ public class homework3
         int b=scanner.nextInt();
         System.out.println("Enter c: ");
         int c=scanner.nextInt();
-        return a+b+c;
+        int res=a+b+c;
+        if (res>0)
+        {
+            System.out.println("the sum is positive");
+        }
+        else if (res==0)
+        {
+            System.out.println("the sum is equal to zero");
+        }
+        else
+        {
+            System.out.println("The sum is negative");
+        }
     }
-    public static void selectColor() {
+
+    public static void selectColor()
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an integer:");
         int data = scanner.nextInt();
@@ -64,17 +88,30 @@ public class homework3
         int a=scanner.nextInt();
         System.out.println("Enter b: ");
         int b=scanner.nextInt();
-        if(a>=b)
+
+        if(a>b)
         {
-            System.out.println("a>=b");
+            System.out.println("a>b");
+        }
+        else if(a==b)
+        {
+            System.out.println("a=b");
         }
         else
         {
             System.out.println("a<b");
         }
     }
-    public static void addOrSubtractandPrint(int initValue,int delta, boolean increment)
+    public static void addOrSubtractandPrint()
     {
+        Scanner scanner1=new Scanner(System.in);
+        System.out.println("Enter initValue");
+        int initValue=scanner1.nextInt();
+        System.out.println("Enter delta");
+        int delta=scanner1.nextInt();
+        System.out.println("Enter boolean");
+        boolean increment=scanner1.nextBoolean();
+
         if(increment)
         {
             System.out.println(initValue+delta);
@@ -84,4 +121,5 @@ public class homework3
             System.out.println(initValue-delta);
         }
     }
+
 }
