@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class GuessTheWordGame {
-    private String[] words = {"java", "programming", "computer", "science", "development"};
+    private String[] words = {"java", "programming", "computer", "science", "development","banana"};
     private String chosenWord;
     private Set<Character> guessedLetters;
     private int attempts;
